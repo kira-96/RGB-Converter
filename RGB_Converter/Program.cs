@@ -7,7 +7,7 @@
     {
         static void Main(string[] args)
         {
-            fun1();
+            fun3();
         }
 
         static void fun1()
@@ -22,6 +22,13 @@
         {
             UInt16 arg = Convert.ToUInt16(Console.ReadLine(), 16);
             UInt32 res = RGBConvert.RGB565_to_RGB888(arg);
+            Console.WriteLine("{0:x}", res);
+            Console.ReadKey();
+        }
+
+        static void fun3()
+        {
+            byte res = RGBConvert.RGB_to_Gray(0x0010F030);
             Console.WriteLine("{0:x}", res);
             Console.ReadKey();
         }
